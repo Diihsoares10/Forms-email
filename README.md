@@ -28,7 +28,6 @@ O usuário preenche os campos do formulário e o sistema envia os dados para o e
 
 ![Demonstração do Formulário](./static/img/Principal.png)
 
-> 💡 Coloque a imagem `preview-form.png` na pasta `static/img/` (ou outro caminho que você usar no seu projeto).
 
 ---
 
