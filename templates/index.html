@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Formulário de Contato</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container">
+  <div class="card card-form shadow">
+    <h2 class="mb-4 text-center">Formulário de Contato</h2>
+    <form action="/send_email" method="POST">
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="col-md-6">
+                <label for="sobrenome" class="form-label">Sobrenome</label>
+                <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="idade" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="idade" name="idade" placeholder="Ex: 30" min="0">
+            </div>
+            <div class="col-md-4">
+                <label for="profissao" class="form-label">Profissão</label>
+                <input type="text" class="form-control" id="profissao" name="profissao" placeholder="Ex: Engenheiro">
+            </div>
+            <div class="col-md-4">
+                <label for="genero" class="form-label">Gênero</label>
+                <select class="form-select" id="genero" name="genero">
+                    <option selected>Escolha...</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                    <option value="Prefiro não informar">Prefiro não informar</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">E-mail destinatário</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="destinatario@exemplo.com" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(99) 99999-9999">
+        </div>
+
+        <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+            <label class="form-check-label">Desejo receber novidades e atualizações</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+    </form>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
